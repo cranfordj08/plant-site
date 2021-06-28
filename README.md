@@ -1,2 +1,0 @@
-# plant-site
-Hugo site
