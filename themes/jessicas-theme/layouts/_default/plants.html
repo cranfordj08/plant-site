@@ -1,0 +1,24 @@
+<html>
+{{ partial "head" . }}
+<body>
+     {{ partial "header" (dict "Kind" .Kind "Template" "List") }}
+     <section class="container content">
+          {{.Content}}
+     </section>
+     {{ range .Pages }}
+          <section class="container index-list">
+               <div class="index-list__plant">
+                    <div>
+                         <a href="{{.URL}}">{{.Title}}</a>
+                    </div>
+                    <div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+                    <div>{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+                    <div>{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+
+                    <p>{{.Summary | truncate 40}}</p>
+               </div>    
+          </div>
+     {{ end }}
+     {{ partial "footer" . }}
+</body>
+</html>

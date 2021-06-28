@@ -1,0 +1,13 @@
+.index-list {
+    a {
+        color: var(--pink);
+    }
+
+    p {
+        margin: 0;
+    }
+
+    &__plant {
+        margin: 40px 0;
+    }
+}
