@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jessicacranford.com/</loc>
-    <lastmod>2021-06-28T11:57:09-05:00</lastmod>
-  </url><url>
     <loc>https://jessicacranford.com/plants/</loc>
+    <lastmod>2021-06-28T16:22:15-05:00</lastmod>
+  </url><url>
+    <loc>https://jessicacranford.com/plants/swiss-cheese-plant/</loc>
+    <lastmod>2021-06-28T16:22:15-05:00</lastmod>
+  </url><url>
+    <loc>https://jessicacranford.com/plants/golden-pothos/</loc>
+    <lastmod>2021-06-28T15:16:20-05:00</lastmod>
+  </url><url>
+    <loc>https://jessicacranford.com/</loc>
     <lastmod>2021-06-28T11:57:09-05:00</lastmod>
   </url><url>
     <loc>https://jessicacranford.com/categories/</loc>
