@@ -21,9 +21,8 @@
           </div>
           <div class="home-grid__right-column">
                <div class="plant-items">
-               {{ range where .Pages "Section" "plants" }}
-               {{ range .Pages }}
-                    <section class="container index-list">
+                {{ range first 4 (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
+                                      <section class="container index-list">
                          <div class="index-list__plant">
                               <div>
                                    <a href="{{.URL}}">{{.Title}}</a>
@@ -31,7 +30,6 @@
                               {{ with .Params.featured_image }}<div class="index-list__featured-image"><div class="index-list__gradient"></div><img src="{{ . }}"></div>{{ end }}
                          </div>
                     </section>
-               {{ end }}
                {{ end }}
                </div>
           </div>

@@ -1,6 +1,6 @@
 .site-header {
-  padding: 20px 5px;
   position: fixed;
+  width: 96px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -15,6 +15,7 @@
     height: 100%;
     justify-content: space-between;
     list-style: none;
+    padding: 20px 5px;
 
     li {
       flex: 1;
@@ -28,7 +29,8 @@
       text-transform: lowercase;
 
       &[aria-current="page"] {
-        outline: 1px dashed var(--color-scheme-border);
+        text-decoration: underline;
+        text-underline-offset: 3px;
       }
     }
   }

@@ -2,7 +2,9 @@ baseURL = "https://jessicacranford.com/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "jessicas-theme"
-canonifyURLs = true
+
+[params]
+  mainSections = ["blog", "plants"]
 
 [menu]
 
