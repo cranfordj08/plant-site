@@ -1,9 +1,10 @@
 <html>
 {{ partial "head" . }}
 <body>
-     {{ partial "header" (dict "Kind" .Kind "Template" "List") }}
+  {{ partial "header.html" . }}
      <section class="container content">
           {{.Content}}
+          list template
      </section>
      {{ range .Pages }}
           <section class="container index-list">
@@ -16,7 +17,7 @@
                     <div>{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
 
                     <p>{{.Summary | truncate 40}}</p>
-               </div>    
+               </div>
           </div>
      {{ end }}
      {{ partial "footer" . }}

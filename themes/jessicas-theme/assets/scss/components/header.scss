@@ -1,24 +1,31 @@
 .site-header {
-  padding: 20px 0 100px;
+  padding: 20px 5px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
 
   h1 {
     color: var(--orange);
   }
 
   ul {
+    writing-mode: vertical-rl;
     display: flex;
-    justify-content: center;
+    height: 100%;
+    justify-content: space-between;
+    list-style: none;
 
     li {
-      &:not(:last-of-type) {
-        margin-right: 20px;
-      }
+      flex: 1;
     }
 
     a {
       display: block;
       padding: 20px;
+      text-align: center;
       text-decoration: none;
+      text-transform: lowercase;
 
       &[aria-current="page"] {
         outline: 1px dashed var(--color-scheme-border);

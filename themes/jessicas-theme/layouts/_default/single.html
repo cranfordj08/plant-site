@@ -1,10 +1,11 @@
 <html>
 {{ partial "head" . }}
 <body>
-     {{ partial "header" (dict "Kind" .Kind "Template" "Single") }}
+  {{ partial "header.html" . }}
 
      <section class="container">
           <h1>{{.Title}}</h1>
+          special single for non-plants
           <div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
           <div>{{if .Params.author}}Author: {{.Params.Author}}{{end}}</div>
           <div>{{.Content}}</div>
