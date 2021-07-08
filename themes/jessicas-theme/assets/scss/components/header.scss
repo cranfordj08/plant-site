@@ -4,10 +4,8 @@
   top: 0;
   right: 0;
   bottom: 0;
-
-  h1 {
-    color: var(--orange);
-  }
+  background: var(--white);
+  z-index: 100000;
 
   ul {
     writing-mode: vertical-rl;

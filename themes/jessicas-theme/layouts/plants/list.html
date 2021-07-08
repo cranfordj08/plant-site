@@ -1,0 +1,25 @@
+<html>
+{{ partial "head" . }}
+<body>
+  {{ partial "header.html" . }}
+     <section class="container content">
+        {{.Content}}
+     </section>
+     <section class="container plants index-list grid">
+        {{ range .Pages }}
+          <div class="index-list__plant">
+              <div>
+                <a href="{{.URL}}">{{.Title}}</a>
+              </div>
+              {{ with .Params.Featured_Image }}
+                <div class="index-list__featured-image">
+                  <div class="index-list__gradient"></div>
+                  <img src="localhost:1313/{{ . }}">
+                </div>
+              {{ end }}
+          </div>
+        {{ end }}
+      </section>
+     {{ partial "footer" . }}
+</body>
+</html>
