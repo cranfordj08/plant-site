@@ -22,7 +22,7 @@
           <div class="home-grid__right-column">
                <div class="plant-items">
                 {{ range first 4 (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
-                                      <section class="container index-list">
+                      <section class="container index-list">
                          <div class="index-list__plant">
                               <div>
                                    <a href="{{.URL}}">{{.Title}}</a>

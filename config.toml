@@ -4,7 +4,7 @@ title = "My New Hugo Site"
 theme = "jessicas-theme"
 
 [params]
-  mainSections = ["blog", "plants"]
+  mainSections = ["plants"]
 
 [menu]
 
