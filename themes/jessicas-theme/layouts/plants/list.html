@@ -5,19 +5,9 @@
      <section class="container content">
         {{.Content}}
      </section>
-     <section class="container plants index-list grid">
+     <section class="container plant-list grid grid-3-col">
         {{ range .Pages }}
-          <div class="index-list__plant">
-              <div>
-                <a href="{{.URL}}">{{.Title}}</a>
-              </div>
-              {{ if isset .Params "images" }}
-                <div class="index-list__featured-image">
-                  <div class="index-list__gradient"></div>
-                  <img src="/images/{{ index (.Params.images) 0 }}" alt="{{ .Params.thumbnailAlt }}" />
-                </div>
-              {{ end }}
-          </div>
+          {{ partial "plant.html" . }}
         {{ end }}
       </section>
      {{ partial "footer" . }}

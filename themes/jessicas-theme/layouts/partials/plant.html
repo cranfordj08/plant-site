@@ -1,0 +1,9 @@
+<div class="plant">
+  <a href="{{.URL}}">{{.Title}}</a>
+  {{ if isset .Params "images" }}
+    <div class="plant__featured-image">
+      <div class="plant__gradient"></div>
+      <img src="/images/{{ index (.Params.images) 0 }}" alt="{{ .Params.thumbnailAlt }}" />
+    </div>
+  {{ end }}
+</div>

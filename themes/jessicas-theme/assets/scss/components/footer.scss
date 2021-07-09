@@ -1,6 +1,10 @@
 .footer {
-  padding: 200px 0 40px;
+  padding: 40px 0;
   text-align: center;
   font-size: 12px;
   text-transform: lowercase;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 106px);
 }

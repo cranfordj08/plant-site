@@ -1,9 +1,9 @@
 <html>
 {{ partial "head" . }}
 <body>
-     {{ partial "header.html" . }}
+  {{ partial "header.html" . }}
 
-     <section class="content home-grid grid">
+  <section class="content home-grid grid grid-2-col">
          <div class="home-grid__left-column">
               <div class="home-grid__image">
                     <img src="images/hero-plants.jpg" alt="Plants" />
@@ -42,6 +42,32 @@
           </div>
      </section>
 
-     {{ partial "footer" . }}
+    <div class="home-grid__left-column">
+      <div class="home-grid__image">
+        <img src="images/hero-plants.jpg" alt="Plants" />
+        <h1>plants</h1>
+        <div class="home-grid__gradient"></div>
+      </div>
+      <div class="container home-blog">
+          <p>i never know what to say</p>
+          {{ range where .Pages "Section" "blog" }}
+            {{ range .Pages }}
+                <a href="{{.URL}}">{{.Title}}</a>
+            {{ end }}
+          {{ end }}
+      </div>
+    </div>
+
+    <div class="home-grid__right-column">
+      <div class="home-grid__plant-list plant-list grid grid-1-col">
+        {{ range first 4 (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
+          {{ partial "plant.html" . }}
+        {{ end }}
+      </div>
+  </div>
+
+  </section>
+
+  {{ partial "footer" . }}
 </body>
 </html>
