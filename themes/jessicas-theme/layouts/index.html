@@ -6,7 +6,7 @@
      <section class="content home-grid grid">
          <div class="home-grid__left-column">
               <div class="home-grid__image">
-                    <img src="hero-plants.jpg" alt="Plants" />
+                    <img src="images/hero-plants.jpg" alt="Plants" />
                     <h1>plants</h1>
                     <div class="home-grid__gradient"></div>
                </div>
@@ -27,7 +27,14 @@
                               <div>
                                    <a href="{{.URL}}">{{.Title}}</a>
                               </div>
-                              {{ with .Params.featured_image }}<div class="index-list__featured-image"><div class="index-list__gradient"></div><img src="{{ . }}"></div>{{ end }}
+                              {{ if isset .Params "images" }}
+                              <div class="index-list__featured-image">
+                                <div class="index-list__gradient"></div>
+                                <img src="/images/{{ index (.Params.images) 0 }}" alt="{{ .Params.thumbnailAlt }}" />
+                              </div>
+                            {{ end }}
+
+              <!-- {{ with .Params.featured_image }}<div class="index-list__featured-image"><div class="index-list__gradient"></div><img src="{{ . }}"></div>{{ end }} -->
                          </div>
                     </section>
                {{ end }}
