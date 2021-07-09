@@ -1,5 +1,5 @@
 :root {
-  --container: 1400px;
+  --container: 1200px;
   --black: #3d3d3d;
   --white: rgb(255, 255, 255);
   --color-scheme-text-color: var(--black);
@@ -49,7 +49,10 @@ body {
   margin: 0;
   color: var(--color-scheme-text-color);
   background-color: var(--color-scheme-background);
-  font-size: 18px;}
+  font-size: 18px;
+  padding: 0 106px 122px 0;
+  min-height: 100vh;
+}
 
 img {
   max-width: 100%;

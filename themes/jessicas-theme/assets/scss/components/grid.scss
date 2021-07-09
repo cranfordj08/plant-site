@@ -2,7 +2,17 @@
   display: grid;
 }
 
+.grid-1-col {
+  grid-template-columns: 1fr;
+  grid-gap: 80px;
+}
+
+.grid-2-col {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 80px;
+}
+
 .grid-3-col {
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 80px;
 }
