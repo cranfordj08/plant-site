@@ -26,6 +26,7 @@
       text-decoration: none;
       text-transform: lowercase;
 
+      &:hover,
       &[aria-current="page"] {
         text-decoration: underline;
         text-underline-offset: 3px;

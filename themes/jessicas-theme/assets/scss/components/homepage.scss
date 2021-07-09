@@ -5,7 +5,7 @@
     &__left-column {
       display:flex;
       flex-direction: column;
-      align-content: center;
+      align-items: center;
     }
 
     &__image {
@@ -50,3 +50,7 @@
       margin: 150px auto;
     }
  }
+
+ .home-blog {
+  padding: 300px 0 100px;
+}
