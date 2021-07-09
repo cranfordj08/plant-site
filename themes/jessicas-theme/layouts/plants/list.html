@@ -11,10 +11,10 @@
               <div>
                 <a href="{{.URL}}">{{.Title}}</a>
               </div>
-              {{ with .Params.Featured_Image }}
+              {{ if isset .Params "images" }}
                 <div class="index-list__featured-image">
                   <div class="index-list__gradient"></div>
-                  <img src="localhost:1313/{{ . }}">
+                  <img data-src="{{ index (.Params.images) 0 }}" alt="{{ .Params.thumbnailAlt }}" />
                 </div>
               {{ end }}
           </div>
