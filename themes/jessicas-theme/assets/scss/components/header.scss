@@ -1,6 +1,6 @@
 .site-header {
   position: fixed;
-  width: 96px;
+  // width: 96px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -13,7 +13,8 @@
     height: 100%;
     justify-content: space-between;
     list-style: none;
-    padding: 20px 5px;
+    padding: 0;
+    margin: 0;
 
     li {
       flex: 1;
@@ -26,9 +27,14 @@
       text-decoration: none;
       text-transform: lowercase;
 
+      @include screen-below($portrait) {
+        padding: 15px;
+      }
+
+      &:hover,
       &[aria-current="page"] {
         text-decoration: underline;
-        text-underline-offset: 3px;
+        text-underline-offset: 2px;
       }
     }
   }

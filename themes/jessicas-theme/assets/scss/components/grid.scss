@@ -5,14 +5,26 @@
 .grid-1-col {
   grid-template-columns: 1fr;
   grid-gap: 80px;
+
+  @include screen-below($portrait) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .grid-2-col {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 80px;
+
+  @include screen-below($portrait) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .grid-3-col {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 80px;
+
+  @include screen-below($portrait) {
+    grid-template-columns: 1fr;
+  }
 }
