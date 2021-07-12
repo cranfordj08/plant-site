@@ -2,6 +2,10 @@
     grid-gap: 40px;
     width: calc(100% - 106px);
 
+    @include screen-below($portrait) {
+      width: calc(100% - 50px);
+    }
+
     &__left-column {
       display:flex;
       flex-direction: column;
@@ -11,6 +15,7 @@
     &__image {
       position: relative;
       height: 70vh;
+      width: 100%;
 
       img {
           width: 100%;

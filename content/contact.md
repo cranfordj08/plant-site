@@ -1,7 +1,7 @@
 ---
 title: "Contact"
 date: 2021-07-08T13:33:17-05:00
-draft: true
+draft: false
 author: "Jessica Cranford"
 type: "contact"
 ---
