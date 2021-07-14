@@ -1,9 +1,9 @@
  .home-grid {
     grid-gap: 40px;
-    width: calc(100% - 106px);
+    width: calc(100% - 60px);
 
     @include screen-below($portrait) {
-      width: calc(100% - 50px);
+      width: 100%;
     }
 
     &__left-column {
@@ -45,7 +45,6 @@
       bottom: -100px;
       left: 50%;
       z-index: 2;
-      font-size: rem(228);
       font-weight: 400;
       line-height: 120px;
     }
@@ -53,6 +52,10 @@
     &__plant-list {
       max-width: 300px;
       margin: 150px auto;
+
+      @include screen-below($portrait) {
+        margin: 50px auto;
+      }
     }
  }
 

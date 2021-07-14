@@ -5,17 +5,19 @@
 
      <section class="container plant-single">
           <h1>{{.Title}}</h1>
-          special single for plants
+          {{ if isset .Params "images" }}
+            <div class="plant-single__featured-image">
+              <div class="plant-gradient"></div>
+              <img src="/images/{{ index (.Params.images) 0 }}" alt="{{ .Params.thumbnailAlt }}" />
+            </div>
+          {{ end }}
           <div>{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
           <div>{{if .Params.author}}Author: {{.Params.Author}}{{end}}</div>
-          {{ with .Params.featured_image }}<div class="featured-image"><img src="{{ . }}"></div>{{ end }}
           <div>{{.Content}}</div>
-          <!-- {{ if isset .Params "images" }} -->
           <h4>Plant images</h4>
             {{ range .Params.images }}
               <img src="/images/{{ . }}" />
               {{ end }}
-          <!-- {{ end }} -->
      </section>
      {{ partial "footer" . }}
 </body>
